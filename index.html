@@ -36,7 +36,7 @@
     }
 
     body.is-open {
-      overflow-y: auto;
+      overflow: visible;
     }
 
     /* ── Buchfalz-Schatten ── */
@@ -101,7 +101,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 52px 28px 48px;
+      padding: 52px 28px max(64px, env(safe-area-inset-bottom) + 48px);
       position: relative;
     }
 
