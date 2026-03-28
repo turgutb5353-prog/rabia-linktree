@@ -157,7 +157,11 @@
       object-position: center top;
       display: block;
       margin-bottom: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15), 0 0 0 5px rgba(74,122,74,0.12);
+      box-shadow:
+        0 0 0 4px var(--page-bg),
+        0 0 0 6px rgba(74,122,74,0.35),
+        0 0 0 10px rgba(74,122,74,0.08),
+        0 6px 24px rgba(0,0,0,0.15);
     }
 
     .name {
