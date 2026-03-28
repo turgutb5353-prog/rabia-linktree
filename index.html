@@ -166,11 +166,22 @@
 
     .name {
       font-family: 'Playfair Display', serif;
-      font-size: 1.9rem;
+      font-size: 2rem;
       font-weight: 700;
+      font-style: italic;
       color: var(--ink);
-      letter-spacing: 0.04em;
-      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+      margin-bottom: 2px;
+      line-height: 1.1;
+    }
+
+    .name-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
     }
 
     .bio {
@@ -180,6 +191,18 @@
       text-align: center;
       margin-bottom: 24px;
       letter-spacing: 0.01em;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .bio::before { content: '❝'; position: absolute; left: 0; top: -4px; font-size: 1.4rem; color: var(--gold); font-style: normal; line-height: 1; }
+    .bio::after  { content: '❞'; position: absolute; right: 0; bottom: -8px; font-size: 1.4rem; color: var(--gold); font-style: normal; line-height: 1; }
+
+    /* ── Mobile tap feedback ── */
+    .link-btn:active {
+      background: rgba(74,122,74,0.18);
+      border-color: var(--gold);
+      transform: scale(0.98);
     }
 
     /* ── Decorative rule ── */
@@ -682,7 +705,8 @@
 
       <div class="spine-gutter" aria-hidden="true"></div>
       <img src="profilbild.jpeg" alt="Rabia" class="avatar">
-      <h1 class="name">RABIA 💚</h1>
+      <h1 class="name">Rabia 💚</h1>
+      <p class="name-tag">@rabiascornerrr</p>
       <p class="bio">richtig gute bücher stehen auf der agenda</p>
 
       <div class="rule"><div class="rule-diamond"></div></div>
