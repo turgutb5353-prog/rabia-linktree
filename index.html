@@ -769,8 +769,11 @@
       <!-- LATEST VIDEO -->
       <div class="section-label">✦ &nbsp; Neuestes Video &nbsp; ✦</div>
       <div class="video-wrap">
-        <div class="video-container" id="latestVideo">
-          <div class="video-loading">▶</div>
+        <div class="video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UU0uZfM8BGPQlhjWlw5Yq2-A&rel=0"
+            title="Neuestes Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
 
@@ -871,29 +874,6 @@
     </div><!-- /cover-board -->
   </div><!-- /cover-stage -->
 
-
-  <script>
-    // ── Latest YouTube Video ──
-    (async () => {
-      const channelId = 'UC0uZfM8BGPQlhjWlw5Yq2-A';
-      const rss = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-      const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(rss)}`;
-      try {
-        const res  = await fetch(proxy);
-        const data = await res.json();
-        const xml  = new DOMParser().parseFromString(data.contents, 'text/xml');
-        const entry = xml.querySelector('entry');
-        const videoId = entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015', 'videoId')[0].textContent;
-        document.getElementById('latestVideo').innerHTML =
-          `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0"
-            title="Neuestes Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>`;
-      } catch {
-        document.querySelector('.video-wrap').style.display = 'none';
-      }
-    })();
-  </script>
 
   <script>
     const board  = document.getElementById('coverBoard');
