@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Rabia's Corner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #4a7c59;
+      --green-light: #7aab8a;
+      --green-dark: #2d5a3d;
+      --cream: #f5f0e8;
+      --cream-dark: #ede6d5;
+      --text: #2c2c2c;
+      --text-muted: #6b6b6b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* Background texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(74,124,89,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(74,124,89,0.06) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(74,124,89,0.3);
+    }
+
+    .back-link {
+      display: inline-block;
+      color: var(--green);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 1; }
+    .back-link::before { content: '← '; }
+
+    .divider {
+      color: var(--green-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--green-dark);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* Sections */
+    .section {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(74,124,89,0.15);
+      border-radius: 12px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.2rem;
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--green);
+      text-decoration: underline;
+      text-decoration-color: rgba(74,124,89,0.4);
+      text-underline-offset: 3px;
+    }
+    a:hover { text-decoration-color: var(--green); }
+
+    .highlight-box {
+      background: rgba(74,124,89,0.08);
+      border-left: 3px solid var(--green-light);
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .platform-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+    .platform-list li {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid rgba(74,124,89,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      align-items: baseline;
+    }
+    .platform-list li:last-child { border-bottom: none; }
+    .platform-name {
+      font-weight: 400;
+      color: var(--green-dark);
+      min-width: 80px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .footer .ornament {
+      color: var(--green-light);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <a href="https://linktree.shelflove.de/" class="back-link">Zurück zur Startseite</a>
+      <div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <h1>Datenschutzerklärung</h1>
+      <p class="subtitle">Rabia's Corner &nbsp;·&nbsp; Stand: März 2025</p>
+    </div>
+
+    <!-- 1. Verantwortliche -->
+    <div class="section">
+      <h2><span class="num">1</span> Verantwortliche Person</h2>
+      <p>
+        Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) für diese Website ist:
+      </p>
+      <div class="highlight-box">
+        Rabia Bayar<br />
+        E-Mail: <a href="mailto:r53bia.business@gmail.com">r53bia.business@gmail.com</a><br />
+        Adresse: auf Anfrage (siehe Impressum)
+      </div>
+    </div>
+
+    <!-- 2. Hosting -->
+    <div class="section">
+      <h2><span class="num">2</span> Hosting & Server-Logfiles</h2>
+      <p>
+        Diese Website wird bei <strong>Strato AG</strong>, Pascalstraße 10, 10587 Berlin, gehostet.
+        Beim Aufruf der Seite werden vom Hosting-Anbieter automatisch technische Daten in sogenannten Server-Logfiles gespeichert. Dazu gehören:
+      </p>
+      <ul class="platform-list">
+        <li><span class="platform-name">IP-Adresse</span> des anfragenden Geräts (anonymisiert)</li>
+        <li><span class="platform-name">Datum & Uhrzeit</span> des Zugriffs</li>
+        <li><span class="platform-name">Aufgerufene Seite</span> (URL)</li>
+        <li><span class="platform-name">Browser & Betriebssystem</span> des Nutzers</li>
+        <li><span class="platform-name">HTTP-Statuscode</span></li>
+      </ul>
+      <p style="margin-top: 0.8rem;">
+        Diese Daten werden ausschließlich zur technischen Sicherstellung des Betriebs verarbeitet und nach spätestens 7 Tagen gelöscht. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am stabilen Betrieb der Website). Die Datenschutzerklärung von Strato findest du unter: <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener">strato.de/datenschutz</a>
+      </p>
+    </div>
+
+    <!-- 3. Cookies -->
+    <div class="section">
+      <h2><span class="num">3</span> Cookies & Tracking</h2>
+      <p>
+        Diese Website verwendet <strong>keine Cookies</strong> und <strong>kein Tracking</strong>.
+        Es werden keine Analyse- oder Werbe-Tools eingesetzt. Es gibt keine Nutzungsprofile und keine Weitergabe deiner Daten an Dritte durch uns.
+      </p>
+    </div>
+
+    <!-- 4. Externe Links -->
+    <div class="section">
+      <h2><span class="num">4</span> Externe Links & Drittplattformen</h2>
+      <p>
+        Diese Seite enthält Links zu externen Plattformen. Wenn du auf einen dieser Links klickst, verlässt du unsere Website und es gelten die Datenschutzbestimmungen der jeweiligen Plattform:
+      </p>
+      <ul class="platform-list">
+        <li>
+          <span class="platform-name">TikTok</span>
+          <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/de-DE" target="_blank" rel="noopener">Datenschutz TikTok</a>
+        </li>
+        <li>
+          <span class="platform-name">Instagram</span>
+          <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener">Datenschutz Instagram</a>
+        </li>
+        <li>
+          <span class="platform-name">Spotify</span>
+          <a href="https://www.spotify.com/de/legal/privacy-policy/" target="_blank" rel="noopener">Datenschutz Spotify</a>
+        </li>
+        <li>
+          <span class="platform-name">READO</span>
+          <a href="https://reado.notion.site/datenschutz" target="_blank" rel="noopener">Datenschutz READO</a>
+        </li>
+        <li>
+          <span class="platform-name">Bookie</span>
+          <a href="https://www.bookie.de/de/datenschutz" target="_blank" rel="noopener">Datenschutz Bookie</a>
+        </li>
+      </ul>
+      <p style="margin-top:0.8rem;">
+        Für die Inhalte und Datenschutzpraktiken dieser externen Seiten übernehmen wir keine Verantwortung.
+      </p>
+    </div>
+
+    <!-- 5. Kontakt per E-Mail -->
+    <div class="section">
+      <h2><span class="num">5</span> Kontaktaufnahme per E-Mail</h2>
+      <p>
+        Wenn du mich per E-Mail kontaktierst, werden die von dir übermittelten Daten (z. B. deine E-Mail-Adresse und dein Anliegen) ausschließlich zur Bearbeitung deiner Anfrage gespeichert und verwendet. Diese Daten werden nicht ohne deine Einwilligung an Dritte weitergegeben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO.
+      </p>
+    </div>
+
+    <!-- 6. Deine Rechte -->
+    <div class="section">
+      <h2><span class="num">6</span> Deine Rechte</h2>
+      <p>Du hast gemäß DSGVO folgende Rechte gegenüber mir als Verantwortlicher:</p>
+      <ul class="platform-list">
+        <li><span class="platform-name">Auskunft</span> über deine gespeicherten Daten (Art. 15 DSGVO)</li>
+        <li><span class="platform-name">Berichtigung</span> unrichtiger Daten (Art. 16 DSGVO)</li>
+        <li><span class="platform-name">Löschung</span> deiner Daten (Art. 17 DSGVO)</li>
+        <li><span class="platform-name">Einschränkung</span> der Verarbeitung (Art. 18 DSGVO)</li>
+        <li><span class="platform-name">Widerspruch</span> gegen die Verarbeitung (Art. 21 DSGVO)</li>
+        <li><span class="platform-name">Datenübertragbarkeit</span> (Art. 20 DSGVO)</li>
+      </ul>
+      <p style="margin-top:0.8rem;">
+        Zur Ausübung deiner Rechte wende dich bitte per E-Mail an: <a href="mailto:r53bia.business@gmail.com">r53bia.business@gmail.com</a>
+      </p>
+      <p>
+        Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig für Nordrhein-Westfalen ist die <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">Landesbeauftragte für Datenschutz und Informationsfreiheit NRW</a>.
+      </p>
+    </div>
+
+    <div class="footer">
+      <span class="ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+      Rabia's Corner &nbsp;·&nbsp; <a href="https://dein-impressum.de/rabia-bayar">Impressum</a>
+    </div>
+
+  </div>
+</body>
+</html>
